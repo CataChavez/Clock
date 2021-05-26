@@ -10,10 +10,14 @@ container.appendChild(element); //que queremos mostrar
 import React from 'react';
 import ReactDOM from 'react-dom'
 
+const style = {
+  color: "blue"
+}
+
 function ticTac(){
   const element = (
     <div>
-      <h2> Son las {new Date().toLocaleTimeString()}.</h2>
+      <h2 style={style}> Son las {new Date().toLocaleTimeString()}.</h2>
     </div>
   );
   const container = document.getElementById('root');
