@@ -1,17 +1,22 @@
+/*
+const element = document.createElement("h1");// crea elemento
+element.innerText = "Jovenes Programadores"; //texto que vamos a colocar
+
+const container = document.getElementById('root');//crea variable que obtiene la ID
+
+container.appendChild(element); //que queremos mostrar
+*/
+
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import ReactDOM from 'react-dom'
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function ticTac(){
+  const element = (
+    <div>
+      <h2> Son las {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  const container = document.getElementById('root');
+  ReactDOM.render(element, container);
+}
+setInterval(ticTac,1000);
